@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0., maximum-scale=1.0, user-scalable=no"
+    />
+    <title>FocusFlow</title>
+
+    <!-- External libraries and stylesheets -->
+    <!-- Add this in the head section of your HTML file -->
+
+    <script src="_lib/js/lib/jquery-2.1.4.js"></script>
+    <script src="_lib/js/lib/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" href="_lib/css/lib/jquery.mobile-1.4.5.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <script src="_lib/js/lib/script.js"></script>
+    <link rel="stylesheet" href="./_lib/css/lib/styles.css" />
+    <link rel="stylesheet" href="_lib/js/todostyles.js" />
+    <script src="./_lib/js/TaskManager.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyF3AAdL4Nv+e4pD2j8b5CI5NqXkCUlJbI"
+      crossorigin="anonymous"
+    />
+    <script src="_lib/js/TaskManager.js"></script>
+  </head>
+
+  <body>
+    <!---------------------------- HOME PAGE ------------------------------------->
+    <div id="ffHomePage" data-role="page">
+      <header data-role="header" data-position="fixed" data-theme="a">
+        <h1>Home Page</h1>
+      </header>
+
+      <section data-role="content">
+        <table class="table-icon">
+          <!-- Table with welcome message and dashboard items -->
+          <!-- Dashboard items link to other pages -->
+          <tr>
+            <td>
+              <img
+                src="./image/FocusFlow.png"
+                alt="Home Page icon"
+                width="200px"
+              />
+            </td>
+            <td>
+              <h1 class="welcome">Welcome to Focus Flow!</h1>
+              <p class="welcome">Your personalized productivity companion.</p>
+            </td>
+          </tr>
+        </table>
+
+        <h2></h2>
+
+        <div class="dashboard-item">
+          <a
+            href="#ffLongTermGoalPage"
+            class="ui-btn ui-icon-check ui-btn-icon-right tick-icon"
+            >Long Term Goal</a
+          >
+          <p>
+            Boost motivation, plan effectively, and foster adaptability with
+            countdowns. Achieve goals for confidence and continued growth.
+          </p>
+        </div>
+
+        <div class="dashboard-item">
+          <a
+            href="#ffHabitListPage"
+            class="ui-btn ui-icon-recycle ui-btn-icon-right tick-icon"
+            >Habit Goal</a
+          >
+          <p>
+            Build efficiency, reduce stress, and form positive habits by
+            scheduling specific times for tasks. Promote discipline and
+            well-being.
+          </p>
+        </div>
+
+        <div class="dashboard-item">
+          <a
+            href="#ffToDoListPage"
+            class="ui-btn ui-icon-plus ui-btn-icon-right tick-icon"
+            >To-Do List</a
+          >
+          <p>
+            Enhance productivity, manage stress, and achieve goals with a
+            flexible to-do list. Easily add or eliminate tasks for effective
+            planning.
+          </p>
+        </div>
+      </section>
+      <!-- Footer content -->
+
+      <footer data-role="footer" data-position="fixed" data-theme="a">
+        <!-- Navigation bar for the Habit List Page -->
+        <div data-role="navbar" data-iconpos="top">
+          <!-- Navigation links -->
+          <ul>
+            <li>
+              <a href="#ffHomePage" class="ui-btn-active ui-state-persist"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#ffLongTermGoalPage">Goals</a>
+            </li>
+            <li><a href="#ffHabitListPage">Habit</a></li>
+            <li><a href="#ffToDoListPage">To-Do</a></li>
+            <li><a href="#ffContactUsPage">Contact</a></li>
+          </ul>
+        </div>
+        <h1>&copy; Focus Flow</h1>
+      </footer>
+    </div>
+
+    <!---------------------------- LONG TERM GOAL PAGE ------------------------------------->
+    <div id="ffLongTermGoalPage" data-role="page">
+      <!-- Back button and header for Long Term Goal Page -->
+      <header data-role="header" data-position="fixed" data-theme="a">
+        <button
+          onclick="goBack()"
+          class="ui-btn ui-icon-back ui-btn-icon-left tick-icon"
+        ></button>
+        <h1>Long Term Goal</h1>
+      </header>
+
+      <section id="long-term-goal" data-role="content">
+        <!-- Long Term Goal Page content -->
+        <header>
+          <!-- Countdown timer navigation -->
+          <nav class="navbar">
+            <div class="app-title">Countdown</div>
+          </nav>
+        </header>
+
+        <main>
+          <!-- Countdown timers and add timer form -->
+          <div class="timer-container" id="timer-container">
+            <div id="current-time"></div>
+          </div>
+          <div class="add-timer-btn" onclick="toggleAddTimerForm()">+</div>
+
+          <div class="add-timer-form" id="add-timer-form" style="display: none">
+            <input type="text" id="timer-name" placeholder="Timer Name" />
+            <input type="date" id="timer-end-date" />
+            <button onclick="addTimer()">Add Timer</button>
+            <button onclick="closeTimer()">Cancel</button>
+          </div>
+
+          <!-- Display real-time current time and date -->
+        </main>
+      </section>
+
+      <footer data-role="footer" data-position="fixed" data-theme="a">
+        <!-- Navigation bar for the Long Term Goal Page -->
+        <div data-role="navbar" data-iconpos="top">
+          <!-- Navigation links -->
+          <ul>
+            <li><a href="#ffHomePage"> Home </a></li>
+            <li>
+              <a
+                href="#ffLongTermGoalPage"
+                class="ui-btn-active ui-state-persist"
+                >Goals</a
+              >
+            </li>
+            <li>
+              <a href="#ffHabitListPage">Habit</a>
+            </li>
+            <li><a href="#ffToDoListPage">To-Do</a></li>
+            <li><a href="#ffContactUsPage">Contact</a></li>
+          </ul>
+        </div>
+        <h1>&copy; Focus Flow</h1>
+      </footer>
+    </div>
+    <!---------------------------- HABIT LIST PAGE ------------------------------------->
+    <div id="ffHabitListPage" data-role="page">
+      <header data-role="header" data-position="fixed" data-theme="a">
+        <button
+          onclick="goBack()"
+          class="ui-btn ui-icon-back ui-btn-icon-left tick-icon"
+        ></button>
+        <h1>Habit List</h1>
+      </header>
+
+      <section data-role="content" id="habit-list">
+        <!-- Habit List Page content -->
+        <header>
+          <nav class="navbar">
+            <div class=""></div>
+            <div class="app-title">Habit</div>
+            <div class=""></div>
+          </nav>
+        </header>
+
+        <div id="all-habit-container">
+          <!-- Container for habit items -->
+          <div class="hacontainer" onclick="showAddHabitDialog()">+</div>
+        </div>
+
+        <!-- Dialog for adding a new habit -->
+        <div id="addHabitDialog" style="display: none">
+          <label for="habitNameInput">Habit Name:</label>
+          <input type="text" id="habitNameInput" /><br />
+          <label for="startTimeInput">Start Time:</label>
+          <input type="time" id="startTimeInput" value="00:00" /><br />
+          <label for="endTimeInput">End Time:</label>
+          <input type="time" id="endTimeInput" value="00:00" /><br />
+
+          <button onclick="addHabit()">Add Habit</button>
+          <button class="btn btn-danger" onclick="hideAddHabitDialog()">
+            Cancel
+          </button>
+        </div>
+      </section>
+      <footer data-role="footer" data-position="fixed" data-theme="a">
+        <!-- Navigation bar for the Habit List Page -->
+        <div data-role="navbar" data-iconpos="top">
+          <ul>
+            <li><a href="#ffHomePage"> Home </a></li>
+            <li>
+              <a href="#ffLongTermGoalPage">Goals</a>
+            </li>
+            <li>
+              <a href="#ffHabitListPage" class="ui-btn-active ui-state-persist"
+                >Habit</a
+              >
+            </li>
+            <li><a href="#ffToDoListPage">To-Do</a></li>
+            <li><a href="#ffContactUsPage">Contact</a></li>
+          </ul>
+        </div>
+        <h1>&copy; Focus Flow</h1>
+      </footer>
+    </div>
+
+    <!---------------------------- TO-DO LIST PAGE ------------------------------------->
+    <div id="ffToDoListPage" data-role="page">
+      <header data-role="header" data-position="fixed" data-theme="a">
+        <button
+          onclick="goBack()"
+          class="ui-btn ui-icon-back ui-btn-icon-left tick-icon"
+        ></button>
+        <h1>To-Do List</h1>
+      </header>
+
+      <section data-role="content" id="to-do-list">
+        <!-- To-Do List Page content -->
+        <div class="todocontainer">
+          <!-- To-Do List container with input and list items -->
+          <div class="todo-header">
+            <h2>ToDo List</h2>
+            <img src="../image/notebook.png" height="50px" />
+          </div>
+          <div class="todo-body">
+            <input
+              type="text"
+              id="todoText"
+              class="todo-input"
+              placeholder="Add your items"
+            />
+            <img
+              src="../image/plus.png"
+              alt="+"
+              id="AddUpdateClick"
+              onclick="CreateToDoItems();"
+            />
+          </div>
+          <h5 id="todoAlert"></h5>
+          <ul id="list-items" class="list-items"></ul>
+        </div>
+      </section>
+
+      <footer data-role="footer" data-position="fixed" data-theme="a">
+        <!-- Navigation bar for the To-Do List Page -->
+        <div data-role="navbar" data-iconpos="top">
+          <ul>
+            <li><a href="#ffHomePage"> Home </a></li>
+            <li>
+              <a href="#ffLongTermGoalPage">Goals</a>
+            </li>
+            <li><a href="#ffHabitListPage">Habit</a></li>
+            <li>
+              <a href="#ffToDoListPage" class="ui-btn-active ui-state-persist"
+                >To-Do</a
+              >
+            </li>
+            <li><a href="#ffContactUsPage">Contact</a></li>
+          </ul>
+        </div>
+        <h1>&copy; Focus Flow</h1>
+      </footer>
+    </div>
+
+    <!---------------------------- CONTACT US PAGE ------------------------------------->
+    <div id="ffContactUsPage" data-role="page">
+      <!-- Back button and header for Contact Us Page -->
+      <header data-role="header" data-position="fixed" data-theme="a">
+        <button
+          onclick="goBack()"
+          class="ui-btn ui-icon-back ui-btn-icon-left tick-icon"
+        ></button>
+        <h1>Contact Us</h1>
+      </header>
+
+      <section data-role="content">
+        <!-- Contact Us Page content -->
+        <ul class="ui-listview-inset">
+          <!-- List of contact information for team members -->
+          <li class="contact-item contact-1">
+            <div>
+              <h2>Siddharth Kumar</h2>
+              <p>Student #: 8846896</p>
+              <p>
+                Email:
+                <a href="mailto:skumar6896@conestogac.on.ca"
+                  >skumar6896@conestogac.on.ca</a
+                >
+              </p>
+              <p>Phone: <a href="tel:+14372696929">437-269-6929</a></p>
+            </div>
+          </li>
+          <li class="contact-item contact-2">
+            <div>
+              <h2>Rohit Rohit</h2>
+              <p>Student #: 8847123</p>
+              <p>
+                Email:
+                <a href="mailto:rohit7123@conestogac.on.ca"
+                  >rohit7123@conestogac.on.ca</a
+                >
+              </p>
+              <p>Phone: <a href="tel:+16478928463">647-892-8463</a></p>
+            </div>
+          </li>
+          <li class="contact-item contact-3">
+            <div>
+              <h2>Arpan Pokharel</h2>
+              <p>Student #: 8708611</p>
+              <p>
+                Email:
+                <a href="mailto:apokharel8611@conestogac.on.ca"
+                  >apokharel8611@conestogac.on.ca</a
+                >
+              </p>
+              <p>Phone: <a href="tel:+14379720407">437-972-0407</a></p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <footer data-role="footer" data-position="fixed" data-theme="a">
+        <div data-role="navbar" data-iconpos="top">
+          <!-- Navigation links -->
+          <ul>
+            <li><a href="#ffHomePage"> Home </a></li>
+            <li>
+              <a href="#ffLongTermGoalPage">Goals</a>
+            </li>
+            <li><a href="#ffHabitListPage">Habit</a></li>
+            <li><a href="#ffToDoListPage">To-Do</a></li>
+            <li>
+              <a href="#ffContactUsPage" class="ui-btn-active ui-state-persist"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <h1>&copy; Focus Flow</h1>
+      </footer>
+    </div>
+  </body>
+</html>

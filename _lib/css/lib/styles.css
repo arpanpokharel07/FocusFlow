@@ -1,0 +1,749 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
+}
+
+body {
+  /* Set font family, line height, and flex properties for body */
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  text-shadow: none;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body,
+#root {
+  /* Set height, margin, and flex properties for HTML, body, and root element */
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Default styles for navigation bar items on all pages */
+[data-role="navbar"] a {
+  /* Styling for navigation bar links */
+  background-color: #ffffffb8 !important;
+  color: #000000 !important;
+}
+
+[data-role="navbar"] a.ui-btn-active {
+  /* Styling for active navigation bar link */
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+/* Global Styles */
+.page {
+  /* Set maximum width and hide horizontal overflow for pages */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#timer {
+  /* Styling for timer element */
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.header {
+  /* Styling for header section */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.content {
+  /* Styling for content section */
+  padding: 20px;
+}
+
+.footer {
+  /* Styling for footer section */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/*---------------- Home Page --------------------*/
+
+#ffHomePage {
+  /* Styling for the Home Page container */
+  background-color: #3498db;
+}
+
+[data-role="header"] {
+  /* Styling for the header section in the Home Page */
+  background-color: #1f1f1f !important;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+}
+
+[data-role="content"] {
+  /* Styling for the content section in the Home Page */
+  background-color: whitesmoke !important;
+  color: #2c3e50 !important;
+  padding: 20px;
+}
+
+.dashboard-item {
+  /* Styling for individual dashboard items in the Home Page */
+  background-color: #d5e212;
+  border: 1px solid #2980b9;
+  margin: 10px 0;
+  padding: 15px;
+  color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-item:hover {
+  /* Hover effect for dashboard items in the Home Page */
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+[data-role="footer"] {
+  /* Styling for the footer section in the Home Page */
+  background-color: #1f1f1f !important;
+  color: #ecf0f1 !important;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+[data-role="navbar"] ul {
+  /* Styling for the navigation bar in the Home Page */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+[data-role="navbar"] a {
+  /* Styling for navigation bar links in the Home Page */
+  text-decoration: none;
+  color: #ecf0f1 !important;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+[data-role="navbar"] a:hover {
+  /* Hover effect for navigation bar links in the Home Page */
+  background-color: #34495e;
+}
+
+[data-role="navbar"] a.ui-btn-active {
+  /* Styling for the active navigation bar link in the Home Page */
+  background-color: #34495e !important;
+}
+
+h1 {
+  /* Styling for heading level 1 in the Home Page */
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.ui-navbar a {
+  /* Styling for navigation bar links in the Home Page */
+  color: #000000 !important;
+  font: bold;
+}
+
+.welcome {
+  /* Styling for the welcome text in the Home Page */
+  color: #2c3e50;
+}
+
+/*---------------- Long Term --------------------*/
+
+#ffLongTermGoalPage {
+  /* Styling for the Long Term Goal Page container */
+  background-color: #ffe6cc;
+}
+
+.navbar {
+  /* Styling for the navigation bar in the Long Term Goal Page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #4caf50;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.menu-icon,
+.settings-icon {
+  /* Styling for menu and settings icons in the Long Term Goal Page */
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.app-title {
+  /* Styling for the app title in the Long Term Goal Page */
+  font-size: 18px;
+  color: #fff;
+}
+
+.timer-container {
+  /* Styling for the timer container in the Long Term Goal Page */
+  margin-top: 20px;
+}
+
+.add-timer-btn {
+  /* Styling for the add timer button in the Long Term Goal Page */
+  position: fixed;
+  bottom: 125px;
+  right: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.add-timer-btn:hover {
+  /* Hover effect for the add timer button in the Long Term Goal Page */
+  background-color: #45a049;
+}
+
+.add-timer-form {
+  /* Styling for the add timer form in the Long Term Goal Page */
+  position: fixed;
+  bottom: 190px;
+  right: 10px;
+  background-color: #4caf50;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-timer-form button {
+  /* Styling for buttons in the add timer form in the Long Term Goal Page */
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.add-timer-form button.cancel {
+  /* Styling for the cancel button in the add timer form in the Long Term Goal Page */
+  background-color: #ff5722;
+  margin-left: 10px;
+}
+
+.add-timer-form button:hover {
+  /* Hover effect for buttons in the add timer form in the Long Term Goal Page */
+  background-color: #45a049;
+}
+
+.delete-timer-btn {
+  /* Styling for the delete timer button in the Long Term Goal Page */
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.delete-timer-btn:hover {
+  /* Hover effect for the delete timer button in the Long Term Goal Page */
+  background-color: #e64a19;
+}
+
+.timer-container {
+  /* Additional styling for the timer container in the Long Term Goal Page */
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.timer-container .timer {
+  /* Styling for individual timers in the Long Term Goal Page */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.timer-container .timer:last-child {
+  /* Styling for the last timer in the Long Term Goal Page */
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Styles specific to the ffLongTermGoalPage */
+#ffLongTermGoalPage [data-role="navbar"] {
+  /* Styling for the navigation bar in the Long Term Goal Page */
+  background-color: #4caf50 !important;
+}
+
+#ffLongTermGoalPage [data-role="navbar"] a {
+  /* Styling for navigation bar links in the Long Term Goal Page */
+  color: #000000 !important;
+}
+
+#ffLongTermGoalPage [data-role="navbar"] a.ui-btn-active {
+  /* Styling for the active navigation bar link in the Long Term Goal Page */
+  background-color: #4caf50 !important;
+  color: #fff !important;
+}
+
+/*---------------- Habit List Page Styles --------------------*/
+
+#ffHabitListPage {
+  /* Styling for the Habit List Page container */
+  background-color: #ffe6b3;
+}
+
+.hacontainer {
+  /* Styling for the habit container */
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Smooth color transition */
+  border-radius: 10px;
+}
+
+.hanit-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.hacontainer:hover {
+  /* Hover effect for the habit container */
+  background-color: #e64a19;
+  /* Darker Orange on hover */
+}
+
+#addHabitDialog {
+  /* Styling for the add habit dialog */
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* Center text in the dialog */
+}
+
+#addHabitDialog label {
+  /* Styling for labels in the add habit dialog */
+  color: #333;
+  /* Dark Gray */
+}
+
+#addHabitDialog input,
+#addHabitDialog select {
+  /* Styling for input and select elements in the add habit dialog */
+  width: 100%;
+  margin: 10px 0;
+  /* Add margin for spacing between input elements */
+  box-sizing: border-box;
+}
+
+#addHabitDialog button {
+  /* Styling for buttons in the add habit dialog */
+  background-color: #ff5722;
+  /* Dark Orange */
+  color: #fff;
+  font-size: 16px;
+  /* Increased padding for emphasis */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Smooth color transition */
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+#addHabitDialog button.cancel {
+  /* Styling for the cancel button in the add habit dialog */
+  background-color: #ccc;
+  /* Light Gray */
+  margin-left: 10px;
+}
+
+#addHabitDialog button:hover {
+  /* Hover effect for buttons in the add habit dialog */
+  background-color: #e64a19;
+  /* Darker Orange on hover */
+}
+
+#addHabitDialog p {
+  /* Styling for paragraphs in the add habit dialog */
+  margin: 10px 0;
+  /* Add margin for spacing */
+  color: transparent;
+  /* Make text transparent initially */
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+#addHabitDialog p.show {
+  /* Styling for success message in the add habit dialog */
+  color: #4caf50;
+  /* Green for success */
+}
+
+#addHabitDialog p.error {
+  /* Styling for error message in the add habit dialog */
+  color: #f44336;
+}
+
+.delete-timer-btn {
+  /* Styling for the delete habit button */
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.delete-timer-btn:hover {
+  /* Hover effect for the delete habit button */
+  background-color: #4caf50;
+  color: #fff !important;
+}
+
+#ffHabitListPage [data-role="navbar"] {
+  /* Styling for the navigation bar in the Habit List Page */
+  background-color: #4caf50 !important;
+}
+
+#ffHabitListPage [data-role="navbar"] a {
+  /* Styling for navigation bar links in the Habit List Page */
+  color: #000000 !important;
+}
+
+#ffHabitListPage [data-role="navbar"] a.ui-btn-active {
+  /* Styling for the active navigation bar link in the Habit List Page */
+  background-color: #4caf50 !important;
+  color: #0c0909 !important;
+}
+
+/*---------------- To-Do List Page Styles --------------------*/
+
+#ffToDoListPage {
+  /* Styling for the To-Do List Page container */
+  height: inherit;
+  background-color: #ffe6cc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: inherit;
+}
+
+.todocontainer {
+  /* Styling for the main To-Do container */
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.todo-header {
+  /* Styling for the header section of the To-Do List */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4caf50;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-input {
+  /* Styling for the input field in the To-Do List */
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #66ff66;
+  border-radius: 5px;
+}
+
+.todo-input:focus {
+  /* Styling for the focused state of the input field */
+  outline: none;
+  border-color: #4caf50;
+}
+
+.todo-input::placeholder {
+  /* Styling for the placeholder text in the input field */
+  color: #4caf50;
+}
+
+.todo-btn {
+  /* Styling for the Add ToDo button */
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.todo-btn:hover {
+  /* Hover effect for the Add ToDo button */
+  background-color: #45a049;
+}
+
+.todo-item {
+  /* Styling for each To-Do item */
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-controls {
+  /* Styling for the controls section of each To-Do item */
+  width: 20px;
+  height: auto;
+}
+
+.todo-item-actions {
+  /* Styling for the action buttons section of each To-Do item */
+  display: flex;
+  gap: 10px;
+}
+
+.delete-todo-btn {
+  /* Styling for the delete button in each To-Do item */
+  background-color: #ff5722;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-todo-btn:hover {
+  /* Hover effect for the delete button in each To-Do item */
+  background-color: #e64a19;
+}
+
+#ffToDoListPage [data-role="navbar"] {
+  /* Styling for the navigation bar in the To-Do List Page */
+  background-color: #4caf50 !important;
+  /* Change the background color as needed */
+}
+
+#ffToDoListPage [data-role="navbar"] a {
+  /* Styling for navigation bar links in the To-Do List Page */
+  color: #000000 !important;
+  /* Change the text color as needed */
+}
+
+#ffToDoListPage [data-role="navbar"] a.ui-btn-active {
+  /* Styling for the active navigation bar link in the To-Do List Page */
+  background-color: #4caf50 !important;
+  /* Change the active button background color as needed */
+  color: #fff !important;
+  /* Change the active text color as needed */
+}
+
+.todo-li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.todo-controls {
+  cursor: pointer;
+  height: 25px;
+  padding: 3px;
+  margin-right: 5px;
+}
+
+li {
+  opacity: 0;
+  animation: new-item-animation 0.3s linear forwards;
+}
+
+@keyframes new-item-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li.deleted-item {
+  animation: removed-item-animation 1s cubic-bezier(0.55, -0.04, 0.91, 0.94)
+    forwards;
+  transform-origin: 0% 100%;
+}
+
+@keyframes removed-item-animation {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(600px) rotateZ(90deg);
+  }
+}
+
+.toggleMe {
+  animation: hideMe 5s forwards;
+}
+
+@keyframes hideMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*---------------- Contact List Styles --------------------*/
+
+.ui-listview-inset {
+  /* Resetting default list styles */
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  /* Styling for each contact item */
+  background: linear-gradient(to right, #3498db, #6ab0de);
+  border: 1px solid #2980b9;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-item:hover {
+  /* Hover effect for each contact item */
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(52, 152, 219, 0.4);
+}
+
+.contact-item h2 {
+  /* Styling for contact item heading */
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.contact-item p {
+  /* Styling for contact item paragraph */
+  margin: 8px 0;
+  color: #ecf0f1;
+}
+
+.contact-item a {
+  /* Styling for contact item links */
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-item a:hover {
+  /* Hover effect for contact item links */
+  color: #d4e6f1;
+}
+
+#ffContactUsPage [data-role="navbar"] {
+  /* Styling for the navigation bar in the Contact Us Page */
+  background-color: #0019d3 !important;
+}
+
+#ffContactUsPage [data-role="navbar"] a {
+  /* Styling for navigation bar links in the Contact Us Page */
+  color: #000000 !important;
+}
+
+#ffContactUsPage [data-role="navbar"] a.ui-btn-active {
+  /* Styling for the active navigation bar link in the Contact Us Page */
+  background-color: #0019d3 !important;
+  color: #fff !important;
+}
+
+/* Specific styles for each contact */
+
+.contact-1 {
+  /* Styling for the first specific contact */
+  background: linear-gradient(to right, #bd2211, #0019d3);
+  border-color: #e74c3c;
+}
+
+.contact-2 {
+  /* Styling for the second specific contact */
+  background: linear-gradient(to right, #7720cf, #0019d3);
+  border-color: #27ae60;
+}
+
+.contact-3 {
+  /* Styling for the third specific contact */
+  background: linear-gradient(to right, #18ab9c, #0019d3);
+  border-color: #e67e22;
+}
